@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id='part1'>
+        {{ message }}
+      <span v-if='seen'> You can see </span>
+      <br>
+      <div>
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+      </div>
+      <br>
+      <div>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+        {{ message }}
+    </div>
+
+    <div>
+      <h1>Conditionals</h1>
+      <button v-on:click="error=!error">Showing a error</button>
+      <button v-on:click="success=!success"> Showing a success </button>
+       <!--<p v-if="error">There is an error</p>
+       <p v-else-if="success">There is an success</p>-->
+       <p v-show="error">There is an error</p>
+       <p v-show="success">There is an success</p>
+    </div>
+
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

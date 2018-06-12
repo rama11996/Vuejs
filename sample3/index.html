@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Computed properties</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="part1">
+      <h1> Computed properties </h1>
+       <button v-on:click="a++">Add to A </button>
+       <button v-on:click="b++">Add to B </button>
+       <p> A - {{ a }} </p>
+       <p> B - {{ b }} </p>
+       <p> Age + A = {{ addtoA }} </p>
+       <p> Age + B = {{ addtoB }} </p>
+       <br>
+       <br>
+       <div>
+         <h1>Dynamic Classes</h1>
+         <p>Example1</p>
+         <div v-bind:class="{red:true, blue:false}"></div>
+         <p>Example2</p>
+       </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>Loops </h1>
+      <ul>
+        <li v-for="(x,index) in name">{{ index+1 }}.{{ x }}</li>
+      </ul>
+      <ul>
+        <li v-for="x in details">{{ x.name }} - {{ x.age }}</li>
+      </ul>
+      <ul>
+        <template v-for="(x,index) in details">
+          <h3>{{ index+1 }}.{{ x.name }}</h3>
+          <p> Age-{{ x.age }} </p>
+        </template>
+      </ul>
+      <template v-for="x in details">
+        <div v-for="(val,key) in x">
+          <p> {{ key }} - {{ val }}</p>
+        </div>
+      </template>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
