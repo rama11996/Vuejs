@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header ></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <names :names="names"></names>
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title" ></app-footer>
   </div>
 </template>
 
@@ -29,10 +29,15 @@ export default {
         {name:'Ramanathan',nickname:'Rama',show:false},
         {name:'Ramanathan',nickname:'Rama',show:false},
         {name:'Ramanathan',nickname:'Rama',show:false}
-      ]
-
+      ],
+      title:"Rama Friends Lists",
     }
+  },
+  methods:{
+  updateTitle:function(updateTitle) {
+    this.title=updateTitle;
   }
+}
 }
 </script>
 

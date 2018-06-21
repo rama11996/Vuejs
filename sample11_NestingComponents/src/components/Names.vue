@@ -7,7 +7,7 @@
 
       </li>
     </ul>
-
+    <button v-on:click="deleteName">Delete Name</button>
   </div>
 </template>
 
@@ -24,6 +24,30 @@ export default{
 
     }
   },
+  methods:{
+    deleteName:function () {
+      this.names.pop();
+    }
+  },
+  //lifecycle hooks
+  beforeCreate(){
+    alert('Before Create');
+  },
+  create(){
+    alert('Created');
+  },
+  beforeMount(){
+    alert('Before Mount');
+  },
+  mount(){
+    alert('Mounted');
+  },
+  beforeUpdate(){
+    alert('Before Update');
+  },
+  update(){
+    alert('Updated');
+  }
 
 }
 </script>
