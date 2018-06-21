@@ -1,8 +1,11 @@
 <template>
   <div>
-    <app-header ></app-header>
-    <names :names="names"></names>
-    <app-footer></app-footer>
+    <header></header>
+    <names></names>
+    <p>
+      <span v-for="n in names">{{ n.name }}</span>
+    </p>
+    <footer></footer>
   </div>
 </template>
 
@@ -15,7 +18,7 @@ export default {
   components:{
     'app-header':Header,
     'app-footer':Footer,
-    'names':Names
+    'app-names':Names
   },
   data () {
     return {
@@ -30,8 +33,10 @@ export default {
         {name:'Ramanathan',nickname:'Rama',show:false},
         {name:'Ramanathan',nickname:'Rama',show:false}
       ]
-
     }
+  },
+  mounted () {
+    console.log(this.names);
   }
 }
 </script>

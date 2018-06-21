@@ -13,21 +13,18 @@
 
 <script>
 export default{
+  props:{
+    names:{
+      type:Array,
+      required:true
+    }
+  },
   data () {
     return {
-      names:[
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false},
-        {name:'Ramanathan',nickname:'Rama',show:false}
-      ]
+
     }
-  }
+  },
+
 }
 </script>
 
