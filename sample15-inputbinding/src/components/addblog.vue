@@ -16,6 +16,10 @@
         <label>Reading</label>
         <input type="checkbox" value="Reading" v-model="blog.categories">
       </div>
+      <p>Blog Degrees</p>
+      <select v-model="blog.degree">
+        <option v-for="degree in degrees">{{ degree }}</option>
+      </select>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
@@ -26,6 +30,7 @@
       <ul>
         <li v-for="category in blog.categories">{{ category }}</li>
       </ul>
+      <p>Degrees: {{ blog.degree }}</p>
     </div>
   </div>
 </template>
@@ -38,8 +43,10 @@ export default {
       blog:{
         title:'',
         content:'',
-        categories:[]
-    }
+        categories:[],
+        degree:""
+    },
+    degrees:['BE','B.Tech','B.A','B.Sc']
     }
   }
 }
