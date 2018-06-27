@@ -1,7 +1,7 @@
 new Vue({
   el:'#part1',
   data:{
-    seen:true,
+    seen:false,
     todos: [
       { text: 'Welcome'  },
       { text:  'to' },

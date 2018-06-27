@@ -13,7 +13,7 @@ new Vue({
       return 'Welocme to '+ college +' Engineering College '+  this.name;
     },
     add:function(inc){
-      this.age +=inc ;
+      this.age +=inc;
     },
     subtract:function(dec){
         this.age -=dec;
