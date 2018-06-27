@@ -9,7 +9,7 @@ Vue.directive('rainbow',{
     el.style.color="#"+Math.random().toString().slice(2,8);
   }
 });
-
+// Custom directives
 Vue.directive('theme',{
   bind(el,binding,vnode){
     if(binding.value=='wide'){
@@ -24,6 +24,17 @@ Vue.directive('theme',{
     }
   }
 });
+
+// Filters
+Vue.filter('to-uppercase',function(value){
+  return value.toUpperCase();
+})
+
+
+Vue.filter('snippet',function(value){
+  return value.slice(0,100)+"...";
+})
+
 
 new Vue({
   el: '#app',
