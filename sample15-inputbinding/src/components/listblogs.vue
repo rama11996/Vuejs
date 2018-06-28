@@ -1,18 +1,17 @@
 <template>
   <div v-theme="'narrow'">
-    <h1>All Blogs..</h1>
+    <h1>List Blogs Titles...</h1>
      <input type="text" v-model="search" placeholder="search blogs"/>
      <div v-for="blog in filteredBlogs" :key="blog" class="single-blog">
      <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
-      <article>{{ blog.body | snippet }}</article>
+      
      </div>
   </div>
 </template>
 
 <script>
-import search from '../Mixins/searchmixins'
+import search from '../Mixins/searchmixins.js'
 export default {
-
   data () {
     return {
       blogs:[],
@@ -52,12 +51,12 @@ export default {
 <style lang="scss">
  #showblog{
    max-width: 800px;
-   margin: 0 70px ;
+   margin: 20px  ;
  }
 .single-blog{
   padding:20px;
   box-sizing:border-box;
-  margin:20px 20px ;
-  background-color:rgb(253, 252, 252);
+  margin:20px 80px ;
+  background-color:rgb(24, 209, 132);
 }
 </style>

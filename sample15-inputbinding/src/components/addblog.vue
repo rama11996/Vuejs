@@ -18,7 +18,7 @@
       </div>
       <p>Blog Degrees</p>
       <select v-model="blog.degree">
-        <option v-for="degree in degrees">{{ degree }}</option>
+        <option v-for="degree in degrees" :key="degree">{{ degree }}</option>
       </select>
       <button v-on:click.prevent="post">Add Blog</button>
 
@@ -33,7 +33,7 @@
       <p>{{ blog.content }}</p>
       <p> Blog Categories:</p>
       <ul>
-        <li v-for="category in blog.categories">{{ category }}</li>
+        <li v-for="category in blog.categories" :key="category">{{ category }}</li>
       </ul>
       <p>Degrees: {{ blog.degree }}</p>
     </div>
